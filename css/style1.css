@@ -1,0 +1,40 @@
+.bgsidebar {
+  background: linear-gradient(183.67deg, #fd749b -18.33%, #281ac8 123.24%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.flex-item {
+  flex: 50%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.spasi{
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: row;
+  }
+  .flex-item {
+    flex: 33%;
+    padding-left: 0em;
+    padding-right: 2px;
+  }
+  .spasi {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+}

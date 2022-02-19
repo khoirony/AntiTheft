@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="leaflet/leaflet.css">
@@ -44,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active pt-2 pb-2">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="DashboardPolisi.html">
                     <i class="fas fa-fw fa-chart-pie"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -53,7 +53,7 @@
             
             <!-- Nav Item - Dashboard -->
             <li class="nav-item  pt-2 pb-2">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="CaseLog.html">
                     <i class="fas fa-fw fa-th-large"></i>
                     <span>Case Log</span></a>
             </li>
@@ -62,7 +62,7 @@
             
             <!-- Nav Item - Dashboard -->
             <li class="nav-item pt-2 pb-2">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="ProfilePolisi.html">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Profile</span></a>
             </li>
@@ -129,76 +129,82 @@
 
                     <!-- Content Row -->
                     <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                User Reported</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Case On Progress</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Case On Progress
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">1</div>
+                        <div class="col">
+                            <div class="row">
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="card border-left-primary shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                        User Reported</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="card border-left-success shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                        Case On Progress</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Case Not Taken</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                        <div class="col">
+                            <div class="row">
+                                <!-- Earnings (Monthly) Card Example -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="card border-left-info shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                        Case On Progress
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">1</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-spinner fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Pending Requests Card Example -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="card border-left-warning shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                        Case Not Taken</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-times-circle fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -219,18 +225,15 @@
 
                     <div class="bg-white p-3 rounded">
                         <h3>Car Information</h3><br>
-                        <div class="row text-left">
-                            <div class="col-3">
-
-                            </div>
-                            <div class="col-5">
+                        <div class="row justify-content-end">
+                            <div class="col-5 text-left">
                                 Owner Name <br><br>
                                 License Plat<br><br>
                                 Car<br><br>
                                 Brand<br><br>
                                 Color
                             </div>
-                            <div class="col-4">
+                            <div class="col-5">
                                 Eugene<br><br>
                                 B 123 AB<br><br>
                                 Pajero<br><br>
@@ -253,11 +256,47 @@
                             <div class="col-5">
                                 Time
                             </div>
-                            <div class="col-7">
+                            <div class="col-4">
                                 Location
+                            </div>
+                            <div class="col-3">
+                                
                             </div>
                         </div>
                         <hr>
+                        <div class="row text-center">
+                            <div class="col-5">
+                                18:20:30 <br>
+                            </div>
+                            <div class="col-4">
+                                -6.22702, 106.83275<br>
+                            </div>
+                            <div class="col-3 text-left pl-0">
+                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track Car</button><br>
+                            </div>
+                        </div>
+                        <div class="row text-center pt-2">
+                            <div class="col-5">
+                                18:20:00 <br>
+                            </div>
+                            <div class="col-4">
+                                -6.22702, 106.83275<br>
+                            </div>
+                            <div class="col-3 text-left pl-0">
+                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track Car</button><br>
+                            </div>
+                        </div>
+                        <div class="row text-center pt-2">
+                            <div class="col-5">
+                                18:00:00 <br>
+                            </div>
+                            <div class="col-4">
+                                -6.22702, 106.83275<br>
+                            </div>
+                            <div class="col-3 text-left pl-0">
+                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track Car</button><br>
+                            </div>
+                        </div>
                     </div>
 
                     <br>
@@ -271,7 +310,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Your Website 2022</span>
                     </div>
                 </div>
             </footer>
@@ -318,15 +357,6 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
-    
-    
     <script>
                     var map = L.map('map').setView([-6.906113, 112.080498], 15);
                     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {

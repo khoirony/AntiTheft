@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard User</title>
+    <title>Mode</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active pt-2 pb-2">
+            <li class="nav-item pt-2 pb-2">
                 <a class="nav-link" href="DashboardUser.html">
                     <i class="fas fa-fw fa-chart-pie"></i>
                     <span>Dashboard</span></a>
@@ -51,7 +51,7 @@
             <hr class="sidebar-divider my-0">
             
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item  pt-2 pb-2">
+            <li class="nav-item active pt-2 pb-2">
                 <a class="nav-link" href="Mode.html">
                     <i class="fas fa-fw fa-th-large"></i>
                     <span>Mode</span></a>
@@ -88,7 +88,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <span class="ml-3">Dashboard</span> 
+                    <span class="ml-3">Mode</span> 
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -125,51 +125,28 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <div class="bg-white p-3 rounded">
-                        <h3>Car Location</h3>
-                        <div id="map" style="height:500px;"></div>
-                    </div>
-
-                    <br>
-                    
-                    <div class="bg-white p-3 rounded">
-                        <h3>Location History</h3><br>
-                        <div class="row text-center">
-                            <div class="col-5">
-                                Time
-                            </div>
-                            <div class="col-7">
-                                Location
-                            </div>
+                    <div class="row spasi">
+                        <div class="col-md-6 text-white bg-danger text-center rounded-left p-5">
+                            <h1 class="display-1"><i class="fas fa-exclamation-circle"></i></h1>
+                            <h1>INTENSE</h1>
+                            <h3>Warning! Your car has been stolen and “Product” will  send your location for every 9 second. Please Report Immediately!</h3>
                         </div>
-                        <hr>
-                        <div class="row text-center">
-                            <div class="col-5">
-                                18:20:30 <br>
+                        <div class="col-md-6 bg-white text-center rounded-right pt-5 pb-5">
+                            <h3>Change Mod</h3><br>
+                            <div class="flex-container">
+                                <div class="flex-item mb-2">
+                                    <button type="button" class="btn btn-block btn-success btn-lg">Idle</button>
+                                </div>
+                                <div class="flex-item mb-2">
+                                    <button type="button" class="btn btn-block btn-warning btn-lg">Surveillence</button>
+                                </div>
+                                <div class="flex-item mb-2">
+                                    <button type="button" class="btn btn-block btn-danger btn-lg">Intense</button>
+                                </div>
                             </div>
-                            <div class="col-7">
-                                -6.22702, 106.83275<br>
-                            </div>
-                        </div>
-                        <div class="row text-center pt-2">
-                            <div class="col-5">
-                                18:20:00 <br>
-                            </div>
-                            <div class="col-7">
-                                -6.22702, 106.83275<br>
-                            </div>
-                        </div>
-                        <div class="row text-center pt-2">
-                            <div class="col-5">
-                                18:00:00 <br>
-                            </div>
-                            <div class="col-7">
-                                -6.22702, 106.83275<br>
-                            </div>
+                            
                         </div>
                     </div>
-                    <br>
                 </div>
                 <!-- /.container-fluid -->
 

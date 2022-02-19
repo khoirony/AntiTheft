@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard User</title>
+    <title>Case Log</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="leaflet/leaflet.css">
     <script src="leaflet/leaflet.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -42,8 +43,8 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active pt-2 pb-2">
-                <a class="nav-link" href="DashboardUser.html">
+            <li class="nav-item pt-2 pb-2">
+                <a class="nav-link" href="DashboardPolisi.html">
                     <i class="fas fa-fw fa-chart-pie"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -51,17 +52,17 @@
             <hr class="sidebar-divider my-0">
             
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item  pt-2 pb-2">
-                <a class="nav-link" href="Mode.html">
+            <li class="nav-item active pt-2 pb-2">
+                <a class="nav-link" href="CaseLog.html">
                     <i class="fas fa-fw fa-th-large"></i>
-                    <span>Mode</span></a>
+                    <span>Case Log</span></a>
             </li>
 
             <hr class="sidebar-divider my-0">
             
             <!-- Nav Item - Dashboard -->
             <li class="nav-item pt-2 pb-2">
-                <a class="nav-link" href="ProfileUser.html">
+                <a class="nav-link" href="ProfilePolisi.html">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Profile</span></a>
             </li>
@@ -88,7 +89,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <span class="ml-3">Dashboard</span> 
+                    <span class="ml-3">Case Log</span> 
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -125,50 +126,55 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <div class="bg-white p-3 rounded">
-                        <h3>Car Location</h3>
-                        <div id="map" style="height:500px;"></div>
-                    </div>
-
-                    <br>
-                    
-                    <div class="bg-white p-3 rounded">
-                        <h3>Location History</h3><br>
+                        <h3>Log</h3><br>
                         <div class="row text-center">
-                            <div class="col-5">
-                                Time
+                            <div class="col-4">
+                                User
                             </div>
-                            <div class="col-7">
+                            <div class="col-3 text-left">
+                                Status
+                            </div>
+                            <div class="col-5 text-left">
                                 Location
                             </div>
                         </div>
-                        <hr>
+                        <hr class="col-10">
                         <div class="row text-center">
-                            <div class="col-5">
-                                18:20:30 <br>
+                            <div class="col-4">
+                                Budi <br>
                             </div>
-                            <div class="col-7">
+                            <div class="col-3 text-left">
+                                Completed
+                            </div>
+                            <div class="col-5 text-left">
                                 -6.22702, 106.83275<br>
                             </div>
                         </div>
                         <div class="row text-center pt-2">
-                            <div class="col-5">
-                                18:20:00 <br>
+                            <div class="col-4">
+                                Tono <br>
                             </div>
-                            <div class="col-7">
+                            <div class="col-3 text-left">
+                                On Progress
+                            </div>
+                            <div class="col-5 text-left">
                                 -6.22702, 106.83275<br>
                             </div>
                         </div>
                         <div class="row text-center pt-2">
-                            <div class="col-5">
-                                18:00:00 <br>
+                            <div class="col-4">
+                                Asep <br>
                             </div>
-                            <div class="col-7">
+                            <div class="col-3 text-left">
+                                Not Taken
+                            </div>
+                            <div class="col-5 text-left">
                                 -6.22702, 106.83275<br>
                             </div>
                         </div>
                     </div>
+
                     <br>
                 </div>
                 <!-- /.container-fluid -->
@@ -226,23 +232,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <script>
-                    var map = L.map('map').setView([-6.906113, 112.080498], 15);
-                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
-                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                        maxZoom: 18,
-                        id: 'mapbox/streets-v11',
-                        tileSize: 512,
-                        zoomOffset: -1,
-                        accessToken: 'your.mapbox.access.token'
-                    }).addTo(map);
-                    var popup = L.popup()
-                    .setLatLng([-6.906113, 112.080498])
-                    .setContent("B 123 AB")
-                    .openOn(map);
-    </script>
-
 </body>
 
 </html>
