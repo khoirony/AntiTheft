@@ -50,7 +50,7 @@
             </li>
 
             <hr class="sidebar-divider my-0">
-            
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item  pt-2 pb-2">
                 <a class="nav-link" href="CaseLog.html">
@@ -59,7 +59,7 @@
             </li>
 
             <hr class="sidebar-divider my-0">
-            
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item pt-2 pb-2">
                 <a class="nav-link" href="ProfilePolisi.html">
@@ -89,7 +89,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <span class="ml-3">Dashboard</span> 
+                    <span class="ml-3">Dashboard</span>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -101,8 +101,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -137,7 +136,8 @@
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
-                                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    <div
+                                                        class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                         User Reported</div>
                                                     <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                                 </div>
@@ -155,7 +155,8 @@
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
-                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    <div
+                                                        class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                         Case On Progress</div>
                                                     <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                                 </div>
@@ -197,7 +198,8 @@
                                         <div class="card-body">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
-                                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    <div
+                                                        class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                         Case Not Taken</div>
                                                     <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                                 </div>
@@ -260,7 +262,7 @@
                                 Location
                             </div>
                             <div class="col-3">
-                                
+
                             </div>
                         </div>
                         <hr>
@@ -272,7 +274,8 @@
                                 -6.22702, 106.83275<br>
                             </div>
                             <div class="col-3 text-left pl-0">
-                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track Car</button><br>
+                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track
+                                    Car</button><br>
                             </div>
                         </div>
                         <div class="row text-center pt-2">
@@ -283,7 +286,8 @@
                                 -6.22702, 106.83275<br>
                             </div>
                             <div class="col-3 text-left pl-0">
-                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track Car</button><br>
+                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track
+                                    Car</button><br>
                             </div>
                         </div>
                         <div class="row text-center pt-2">
@@ -294,7 +298,8 @@
                                 -6.22702, 106.83275<br>
                             </div>
                             <div class="col-3 text-left pl-0">
-                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track Car</button><br>
+                                <button type="button" class="btn btn-primary btn-sm pl-4 pr-4 pt-0 pb-0">Track
+                                    Car</button><br>
                             </div>
                         </div>
                     </div>
@@ -359,18 +364,19 @@
 
     <script>
         var map = L.map('map').setView([-6.906113, 112.080498], 15);
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
-            id: 'mapbox/streets-v11',
-            tileSize: 512,
-            zoomOffset: -1,
-            accessToken: 'your.mapbox.access.token'
-        }).addTo(map);
-        var popup = L.popup()
-        .setLatLng([-6.906113, 112.080498])
-        .setContent("B 123 AB")
-        .openOn(map);
+        L.tileLayer(
+            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'your.mapbox.access.token'
+            }).addTo(map);
+                var popup = L.popup()
+                    .setLatLng([-6.906113, 112.080498])
+                    .setContent("B 123 AB")
+                    .openOn(map);
     </script>
 </body>
 

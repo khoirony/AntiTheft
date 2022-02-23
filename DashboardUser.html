@@ -49,7 +49,7 @@
             </li>
 
             <hr class="sidebar-divider my-0">
-            
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item  pt-2 pb-2">
                 <a class="nav-link" href="ModeIdle.html">
@@ -58,7 +58,7 @@
             </li>
 
             <hr class="sidebar-divider my-0">
-            
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item pt-2 pb-2">
                 <a class="nav-link" href="ProfileUser.html">
@@ -88,7 +88,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <span class="ml-3">Dashboard</span> 
+                    <span class="ml-3">Dashboard</span>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -100,8 +100,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -132,7 +131,7 @@
                     </div>
 
                     <br>
-                    
+
                     <div class="bg-white p-3 rounded">
                         <h3>Location History</h3><br>
                         <div class="row text-center">
@@ -228,19 +227,20 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script>
-                    var map = L.map('map').setView([-6.906113, 112.080498], 15);
-                    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
-                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                        maxZoom: 18,
-                        id: 'mapbox/streets-v11',
-                        tileSize: 512,
-                        zoomOffset: -1,
-                        accessToken: 'your.mapbox.access.token'
-                    }).addTo(map);
-                    var popup = L.popup()
-                    .setLatLng([-6.906113, 112.080498])
-                    .setContent("B 123 AB")
-                    .openOn(map);
+        var map = L.map('map').setView([-6.906113, 112.080498], 15);
+        L.tileLayer(
+            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'your.mapbox.access.token'
+            }).addTo(map);
+            var popup = L.popup()
+                .setLatLng([-6.906113, 112.080498])
+                .setContent("B 123 AB")
+                .openOn(map);
     </script>
 
 </body>
