@@ -21,9 +21,7 @@
     <link href="css/style1.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="leaflet/leaflet.css">
-    <script src="leaflet/leaflet.js"></script> -->
-
+    <!-- Import Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
@@ -36,10 +34,10 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
+       <!-- Sidebar -->
         <ul class="bgsidebar navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
+            <!-- Brand/logo -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-text mx-3">Kelompok 8</div>
             </a>
@@ -55,17 +53,17 @@
             </li>
 
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item  pt-2 pb-2">
+            
+            <!-- Nav Item - Case Log -->
+            <li class="nav-item pt-2 pb-2">
                 <a class="nav-link" href="CaseLog.html">
                     <i class="fas fa-fw fa-th-large"></i>
                     <span>Case Log</span></a>
             </li>
 
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
+            
+            <!-- Nav Item - Profile -->
             <li class="nav-item pt-2 pb-2">
                 <a class="nav-link" href="ProfilePolisi.html">
                     <i class="fas fa-fw fa-book"></i>
@@ -94,6 +92,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+                    <!-- Judul Konten -->
                     <span class="ml-3">Dashboard</span>
 
                     <!-- Topbar Navbar -->
@@ -135,7 +134,8 @@
                     <div class="row">
                         <div class="col">
                             <div class="row">
-                                <!-- Earnings (Monthly) Card Example -->
+                                
+                                <!-- User Reported Card -->
                                 <div class="col-md-6 mb-4">
                                     <div class="card border-left-primary shadow h-100 py-2">
                                         <div class="card-body">
@@ -154,7 +154,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Earnings (Monthly) Card Example -->
+                                <!-- Case On Progress Card -->
                                 <div class="col-md-6 mb-4">
                                     <div class="card border-left-success shadow h-100 py-2">
                                         <div class="card-body">
@@ -176,7 +176,7 @@
                         </div>
                         <div class="col">
                             <div class="row">
-                                <!-- Earnings (Monthly) Card Example -->
+                                <!-- Case On Progress Card -->
                                 <div class="col-md-6 mb-4">
                                     <div class="card border-left-info shadow h-100 py-2">
                                         <div class="card-body">
@@ -197,7 +197,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Pending Requests Card Example -->
+                                <!-- Case Not Taken Card -->
                                 <div class="col-md-6 mb-4">
                                     <div class="card border-left-warning shadow h-100 py-2">
                                         <div class="card-body">
@@ -219,6 +219,7 @@
                         </div>
                     </div>
 
+                    <!-- Select Case -->
                     <div class="text-right">
                         <select class="p-2 border" style="width: 10em;" name="choose" id="choose">
                             <option value="Select Case">Select Case</option>
@@ -228,6 +229,8 @@
                         </select>
                     </div>
                     <br>
+
+                    <!-- Map -->
                     <div class="bg-white p-3 rounded">
                         <h3>Car Location</h3>
                         <div id="map" style="height:500px;"></div>
@@ -239,6 +242,7 @@
 
                     <br>
 
+                    <!-- Information -->
                     <div class="bg-white p-3 rounded">
                         <h3>Car Information</h3><br>
                         <div class="row justify-content-end">
@@ -266,6 +270,8 @@
 
                     <br>
 
+
+                    <!-- History -->
                     <div class="bg-white p-3 rounded">
                         <h3>Location History</h3><br>
                         <div class="row text-center">
@@ -376,9 +382,17 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+    <!-- Custom Map -->
     <script>
-        var map = L.map('map').setView([-6.895982046027607, 112.0892870780038], 15);
-        L.tileLayer(
+        navigator.geolocation.getCurrentPosition(showPosition);
+ 
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            var map = L.map('map').setView([latitude, longitude], 15);
+        
+            L.tileLayer(
             'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                 maxZoom: 18,
@@ -389,14 +403,17 @@
             }).addTo(map);
             L.Routing.control({
             waypoints: [
-                L.latLng(-6.895982046027607, 112.0892870780038),
-                L.latLng(-6.905807603194282, 112.0805058104363)
+                L.latLng(latitude, longitude),
+                L.latLng(-7.2408797,112.7417824)
             ]
             }).addTo(map);
             var popup = L.popup()
-    .setLatLng([-6.895982046027607, 112.0892870780038])
-    .setContent("Posisi Saya")
-    .openOn(map);
+            .setLatLng([latitude, longitude])
+            .setContent("My Location")
+            .openOn(map);
+        }
+
+        
     </script>
 </body>
 
