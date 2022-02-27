@@ -323,6 +323,14 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="text-right mt-3">
+                        <select class="p-2 border-0 bg-warning" style="width: 10em;" name="choose" id="choose">
+                            <option value="Change Status">Change Status</option>
+                            <option value="Change Status">Stolen</option>
+                            <option value="Change Status">Not Stolen</option>
+                        </select>
+                    </div>
 
                     <br>
                 </div>
@@ -399,7 +407,7 @@
                 id: 'mapbox/streets-v11',
                 tileSize: 512,
                 zoomOffset: -1,
-                accessToken: 'your.mapbox.access.token'
+                accessToken: 'pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg'
             }).addTo(map);
             L.Routing.control({
             waypoints: [
