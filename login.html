@@ -22,12 +22,16 @@
 
     <script type="text/javascript">
 	function validasi() {
-		if (document.forms['frm'].Email.value == "user") {
+		if (document.forms['frm'].Email.value == "user" && document.forms['frm'].Password.value == "123") {
 			document.location.href = 'PairDevice.html';
             return false;
-		}else{
+		}else if (document.forms['frm'].Email.value == "admin" && document.forms['frm'].Password.value == "123"){
 			document.location.href = 'DashboardPolisi.html';
             return false;
+		}else if (document.forms['frm'].Email.value == "" && document.forms['frm'].Password.value == ""){
+			alert("Harap Masukkan Data Terlebih Dahulu");
+		}else{
+			alert("Passoword dan Email Salah");
 		}
 	}
     </script>

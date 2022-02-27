@@ -154,7 +154,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Case On Progress Card -->
+                                <!-- Case Completed Card -->
                                 <div class="col-md-6 mb-4">
                                     <div class="card border-left-success shadow h-100 py-2">
                                         <div class="card-body">
@@ -162,7 +162,7 @@
                                                 <div class="col mr-2">
                                                     <div
                                                         class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                        Case On Progress</div>
+                                                        Case Completed</div>
                                                     <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                                 </div>
                                                 <div class="col-auto">
@@ -236,7 +236,7 @@
                         <div id="map" style="height:500px;"></div>
                         <br>
                         <div class="text-center">
-                            <button type="button" class="btn btn-primary btn-sm pl-4 pr-4">Track Car</button>
+                            <button type="button" class="btn btn-primary btn-sm pl-4 pr-4" onclick="return getlokasi();">Track Car</button>
                         </div>
                     </div>
 
@@ -327,8 +327,9 @@
                     <div class="text-right mt-3">
                         <select class="p-2 border-0 bg-warning" style="width: 10em;" name="choose" id="choose">
                             <option value="Change Status">Change Status</option>
-                            <option value="Change Status">Stolen</option>
-                            <option value="Change Status">Not Stolen</option>
+                            <option value="Change Status">Case On Progress</option>
+                            <option value="Change Status">Case Completed</option>
+                            <option value="Change Status">Case Not Taken</option>
                         </select>
                     </div>
 
@@ -392,13 +393,7 @@
 
     <!-- Custom Map -->
     <script>
-        navigator.geolocation.getCurrentPosition(showPosition);
- 
-        function showPosition(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-
-            var map = L.map('map').setView([latitude, longitude], 15);
+        var map = L.map('map').setView([-7.2408797,112.7417824], 15);
         
             L.tileLayer(
             'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
@@ -409,19 +404,43 @@
                 zoomOffset: -1,
                 accessToken: 'pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg'
             }).addTo(map);
+
+        function getlokasi() {
+            //jika browser mendukung navigator.geolocation maka akan menjalankan perintah di bawahnya
+            if (navigator.geolocation) {
+                // getCurrentPosition digunakan untuk mendapatkan lokasi pengguna
+                //showPosition adalah fungsi yang akan dijalankan
+                navigator.geolocation.getCurrentPosition(showPositionKlik);
+            }
+        }
+
+        function showPositionKlik(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+        
+            L.tileLayer(
+            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'pk.eyJ1Ijoia2hvaXJvbnkiLCJhIjoiY2t6c2w1anA5MHFyNjJwbzF3dHRzMmlrbSJ9.CvST75663DLudTug1RmUvg'
+            }).addTo(map);
+            
             L.Routing.control({
             waypoints: [
                 L.latLng(latitude, longitude),
                 L.latLng(-7.2408797,112.7417824)
             ]
             }).addTo(map);
+            
             var popup = L.popup()
             .setLatLng([latitude, longitude])
             .setContent("My Location")
             .openOn(map);
         }
 
-        
     </script>
 </body>
 
