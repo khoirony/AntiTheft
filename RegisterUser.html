@@ -20,6 +20,18 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <script type="text/javascript">
+	function validasi() {
+		if (document.forms['frm'].Password1.value != document.forms['frm'].Password2.value) {
+			alert("Password Tidak Sama");
+		}else if (document.forms['frm'].Password1.value == "" && document.forms['frm'].Password2.value == "") {
+			alert("Harap Masukkan Data Terlebih Dahulu");
+		}else{
+			document.location.href = 'index.html';
+            return false;
+		}
+	}
+    </script>
 </head>
 
 <body>
@@ -38,7 +50,7 @@
                     </div>
                     
                     <br>
-                    <form>
+                    <form name="frm">
                         <div class="form-group">
                             <input type="email" class="form-control p-4" id="Full Name" placeholder="Full Name">
                         </div>
@@ -54,19 +66,20 @@
 
                         <br>
                         <div class="text-center">
-                            <a href="index.html" class="btn btn-primary btn-user font-weight-bolder pl-5 pr-5">SIGNUP</a>
+                            <input type="submit" name="submit" onclick="return validasi();" value="SIGNUP" class="btn btn-primary btn-user font-weight-bolder pl-5 pr-5">
                         </div>
                         
                     </form>
                     
                     <nav class="navbar navbar-light bg-light text-center fixed-top">
                         <div class="container-fluid p-3">
-                            <a class="font-weight-bold" href="login.html"> < Back</a>
+                            <a class="font-weight-bold" href="index.html"> < Back</a>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
+        <br>
     </div>
 
     <!-- Bootstrap core JavaScript-->
